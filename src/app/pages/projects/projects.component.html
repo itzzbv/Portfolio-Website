@@ -1,0 +1,79 @@
+<div class="projects">
+  <section class="projects-hero">
+    <div class="container">
+      <h1 class="page-title">My Projects</h1>
+      <p class="page-description">
+        Explore my full-stack development projects showcasing expertise in Angular, Spring Boot, Java, and modern web technologies.
+      </p>
+    </div>
+  </section>
+
+  <section class="projects-content">
+    <div class="container">
+      <div class="projects-grid">
+        @for (project of projects; track project.title) {
+          <div 
+            class="project-card" 
+            [class.shakti-priya-card]="project.title.toLowerCase().includes('shakti priya')"
+            [class.srinivasan-card]="project.title.toLowerCase().includes('srinivasan')">
+            
+            <div class="project-header">
+              <h2 class="project-title">{{ project.title }}</h2>
+              <div class="tech-stack">
+                @for (tech of project.techStack; track tech) {
+                  <span class="tech-badge">{{ tech }}</span>
+                }
+              </div>
+            </div>
+
+            <div class="project-body">
+              <p class="project-description">{{ project.description }}</p>
+
+              <div class="project-features">
+                <h3 class="features-title">Key Features:</h3>
+                <ul class="features-list">
+                  @for (feature of project.features; track feature) {
+                    <li>{{ feature }}</li>
+                  }
+                </ul>
+              </div>
+
+              <div class="project-links">
+                @if (project.videoLink) {
+                  <a [href]="project.videoLink" target="_blank" rel="noopener" class="project-link video-link">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                    </svg>
+                    Watch Demo
+                  </a>
+                }
+
+                @if (project.rarLink) {
+                  <a [href]="project.rarLink" target="_blank" rel="noopener" class="project-link download-link">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                      <polyline points="7 10 12 15 17 10"></polyline>
+                      <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                    Download Project
+                  </a>
+                }
+
+                @if (project.liveLink) {
+                  <a [href]="project.liveLink" target="_blank" rel="noopener noreferrer" class="project-link live-link">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <line x1="2" y1="12" x2="22" y2="12"></line>
+                      <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                    </svg>
+                    View Live Portfolio
+                  </a>
+                }
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+</div>

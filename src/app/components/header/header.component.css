@@ -1,0 +1,118 @@
+/* --- FIXED HEADER & NAVIGATION BAR --- */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px); /* Safari Support */
+  border-bottom: 1px solid #e2e8f0;
+  padding: 14px 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  position: relative; /* Anchor for absolute mobile positioning */
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #475569;
+  font-size: 0.95rem;
+  font-weight: 500;
+  line-height: 1;
+  transition: color 0.2s ease;
+}
+
+.nav a:hover,
+.nav a.active {
+  color: #2563eb;
+}
+
+.nav .nav-btn {
+  padding: 10px 20px;
+  background: #0f172a;
+  color: #ffffff !important;
+  border-radius: 8px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease;
+}
+
+.nav .nav-btn:hover {
+  background: #1e293b;
+}
+
+/* Hide Hamburger Menu on Desktop */
+.menu-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.hamburger {
+  width: 24px;
+  height: 2px;
+  background-color: #0f172a;
+  display: block;
+}
+
+/* Offset page content so top hero section isn't covered by fixed navbar */
+body, 
+main, 
+.home, 
+.projects {
+  padding-top: 76px;
+}
+
+/* --- MOBILE RESPONSIVE HEADER --- */
+@media (max-width: 768px) {
+  .header-content {
+    justify-content: flex-end;
+    padding: 0 1.5rem;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background: #ffffff;
+    padding: 20px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    gap: 16px;
+    align-items: flex-start;
+    border-bottom: 1px solid #e2e8f0;
+  }
+
+  .nav.active {
+    display: flex;
+  }
+
+  .nav .nav-btn {
+    width: 100%;
+  }
+}

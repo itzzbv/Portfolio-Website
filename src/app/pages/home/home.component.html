@@ -1,0 +1,284 @@
+<div class="home">
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+
+        <h1 class="hero-title">Bharathvaj V</h1>
+
+        <p class="hero-subtitle">
+          MCA Student &amp; Full Stack Software Developer
+        </p>
+
+        <p class="hero-location">
+          📍 Chennai, Tamil Nadu
+        </p>
+
+        <p class="hero-description">
+          A disciplined software developer pursuing my Master of Computer Applications at 
+          SRM Institute of Science and Technology. I specialize in building responsive frontend architectures, 
+          robust C# backend services, and high-performance SQL database systems to solve real-world problems.
+        </p>
+
+        <div class="hero-actions">
+          <a href="assets/Bharathvaj_V_Resume.pdf" download="Bharathvaj_V_Resume.pdf" class="btn btn-primary">
+            Download Resume
+          </a>
+
+          <a routerLink="/projects" class="btn btn-secondary">
+            View Projects
+          </a>
+
+          <a href="https://github.com/itzzbv" target="_blank" rel="noopener" class="btn btn-outline-dark">
+            GitHub Profile
+          </a>
+        </div>
+
+        <div class="contact-info">
+          <a href="mailto:fresherbharathvaj@gmail.com" class="contact-link">
+            fresherbharathvaj&#64;gmail.com
+          </a>
+
+          <span class="separator">•</span>
+
+          <a href="tel:+917338752552" class="contact-link">
+            +91 73387 52552
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ABOUT ME SECTION -->
+  <section id="about" class="about-section">
+    <div class="container">
+      <div class="section-heading">
+        <span class="section-label">BACKGROUND</span>
+        <h2 class="section-title">About Me</h2>
+      </div>
+
+      <div class="about-content">
+        <p class="about-text">
+          I am a software engineer focused on developing full-stack web applications. 
+          With a solid grounding in Java, C#, Angular, and MS SQL Server, I enjoy engineering clean component architectures, 
+          writing efficient backend endpoints, and optimizing data retrieval mechanisms like complex LINQ queries and relational SQL joins.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- WHAT I CAN BUILD (CAPABILITIES) SECTION -->
+  <section id="capabilities" class="capabilities-section">
+    <div class="container">
+
+      <div class="section-heading">
+        <span class="section-label">TECHNICAL CAPABILITIES</span>
+        <h2 class="section-title">What I Can Build</h2>
+        <p class="section-description">
+          Engineered solutions designed for usability, performance, and scalability.
+        </p>
+      </div>
+
+      <div class="capabilities-grid">
+        <div class="capability-card" *ngFor="let item of capabilities">
+          <div class="capability-icon">{{ item.icon }}</div>
+          <h3 class="capability-title">{{ item.title }}</h3>
+          <p class="capability-description">
+            {{ item.description }}
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- SKILLS SECTION -->
+  <section class="skills">
+    <div class="container">
+
+      <div class="section-heading">
+        <span class="section-label">TECHNICAL STACK</span>
+        <h2 class="section-title">Skills &amp; Expertise</h2>
+      </div>
+
+      <div class="skills-grid">
+
+        <!-- Technical Skills -->
+        <div class="skill-card">
+          <div class="skill-card-header">
+            <span class="skill-icon">💻</span>
+            <h3>Technical Skills</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="tag" *ngFor="let skill of skills.languages">
+              {{ skill }}
+            </span>
+          </div>
+        </div>
+
+        <!-- Soft Skills -->
+        <div class="skill-card">
+          <div class="skill-card-header">
+            <span class="skill-icon">🚀</span>
+            <h3>Soft Skills</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="tag" *ngFor="let skill of skills.softSkills">
+              {{ skill }}
+            </span>
+          </div>
+        </div>
+
+        <!-- Languages Known -->
+        <div class="skill-card">
+          <div class="skill-card-header">
+            <span class="skill-icon">🌐</span>
+            <h3>Languages Known</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="tag" *ngFor="let lang of skills.spokenLanguages">
+              {{ lang }}
+            </span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- EXPERIENCE SECTION -->
+  <section class="experience">
+    <div class="container">
+
+      <div class="section-heading">
+        <span class="section-label">PRACTICAL EXPERIENCE</span>
+        <h2 class="section-title">Internship Experience</h2>
+      </div>
+
+      <div class="experience-grid">
+        <div class="experience-card" *ngFor="let internship of internships">
+
+          <div class="experience-top">
+            <div class="experience-icon">💼</div>
+            <span class="experience-period">
+              {{ internship.period }}
+            </span>
+          </div>
+
+          <h3 class="experience-title">
+            {{ internship.title }}
+          </h3>
+
+          <p class="experience-company">
+            {{ internship.company }}
+          </p>
+
+          <div class="experience-line"></div>
+
+          <p class="experience-description">
+            {{ internship.description }}
+          </p>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- EDUCATION SECTION -->
+  <section class="education">
+    <div class="container">
+
+      <div class="section-heading">
+        <span class="section-label">ACADEMIC BACKGROUND</span>
+        <h2 class="section-title">Education</h2>
+      </div>
+
+      <div class="education-grid">
+
+        <!-- MCA -->
+        <div class="education-card current-education">
+
+          <div class="education-header">
+            <span class="education-status">Currently Pursuing</span>
+            <span class="education-year">2026 – 2028</span>
+          </div>
+
+          <div class="education-icon">🎓</div>
+
+          <h3 class="education-degree">
+            Master of Computer Applications (MCA)
+          </h3>
+
+          <p class="education-institution">
+            SRM Institute of Science and Technology, Ramapuram
+          </p>
+
+          <p class="education-details">
+            Postgraduate Degree
+          </p>
+
+        </div>
+
+        <!-- BCA -->
+        <div class="education-card">
+
+          <div class="education-header">
+            <span class="education-status completed">Completed</span>
+            <span class="education-year">2025</span>
+          </div>
+
+          <div class="education-icon">🎓</div>
+
+          <h3 class="education-degree">
+            Bachelor of Computer Applications (BCA)
+          </h3>
+
+          <p class="education-institution">
+            Patrician College of Arts and Science
+          </p>
+
+          <p class="education-details">
+            CGPA: 7.0
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- CONTACT / HIRE ME SECTION -->
+  <section id="contact" class="contact-section">
+    <div class="container text-center">
+
+      <div class="section-heading">
+        <span class="section-label">GET IN TOUCH</span>
+        <h2 class="section-title">Let's Work Together</h2>
+        <p class="section-description">
+          I am currently open to software engineering roles and project collaborations.
+        </p>
+      </div>
+
+      <div class="contact-actions">
+        <a href="mailto:fresherbharathvaj@gmail.com" class="btn btn-primary btn-lg">
+          Send Email
+        </a>
+        <a href="https://github.com/itzzbv" target="_blank" rel="noopener" class="btn btn-secondary btn-lg">
+          Explore My GitHub
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+</div>
